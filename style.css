@@ -1,0 +1,164 @@
+/* dibawah ini merupakan style untuk mengatur styling semua yang ada dalam tag body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dbc6b5;
+    font-family: "Poppins", sans-serif;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari radio button dengan id female saat tidak terpilih (not checked) */
+#female:not(:checked) + label {
+    border-color: rgb(224, 80, 212);
+    border-width: 1px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari radio button dengan id male saat tidak terpilih (not checked) */
+#male:not(:checked) + label {
+    border-color: rgb(116, 176, 216);
+    border-width: 1px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari radio button dengan id other saat tidak terpilih (not checked) */
+#other:not(:checked) + label {
+    border-color: rgb(59, 53, 59);
+    border-width: 1px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari radio button dengan id female saat terpilih (checked) */
+#female:checked + label {
+    background-color: rgb(224, 80, 212);
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari radio button dengan id male saat terpilih (checked) */
+#male:checked + label {
+    background-color: rgb(116, 176, 216);
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari radio button dengan id other saat terpilih (checked) */
+#other:checked + label {
+    background-color: rgb(191, 184, 192);
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag yang menggunakan class formcontainer */
+.formcontainer {
+    max-width: 85%;
+    margin: 50px auto;
+    background: #eeeeee;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag yang menggunakan class newcontainer */
+.newcontainer {
+    max-width: 85%;
+    margin: 50px auto;
+    background: #eeeeee;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag th */
+th {
+    height: 70px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag label yang terdapat dalam tag dengan id "myForm" */
+#myForm label {
+    margin-right: 20px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag input yang bertipe "submit" yang terdapat dalam tag dengan id "myForm" */
+#myForm input[type="submit"] {
+    justify-self: end;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag h1 dan h3 */
+h1, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag label */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag table, th, dan td */
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+}
+  
+/* dibawah ini merupakan style untuk mengatur styling dari tag th dan td */
+th, td {
+    padding: 15px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag input dengan tipe "text", "email", "date", "tel", dan "file", serta tag select */
+input[type="text"], input[type="email"], input[type="date"], input[type="tel"], input[type="file"], select {
+    width: 100%;
+    padding-top: 8px;
+    margin-top: 5px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag textarea */
+textarea {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag yang memiliki id output */
+#output {
+    margin-top: 20px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag yang menggunakan class incontainer */
+.incontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 20px;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag input dengan tipe "submit" yang terdapat dalam tag dengan id "myForm" */
+#myForm input[type="submit"] {
+    width: 100%;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag button */
+button {
+    width: 100%;
+    background-color: #36965e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag button saat mouse hover ke arah button */
+button:hover {
+    background-color: #3fd16b;
+}
+
+/* dibawah ini merupakan style untuk mengatur styling dari tag input dengan tipe "submit" yang terdapat dalam tag dengan id myForm  saat mouse hover ke arah button */
+#myForm input[type="submit"]:hover {
+    background-color: #2980b9;
+}

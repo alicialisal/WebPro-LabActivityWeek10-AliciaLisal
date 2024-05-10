@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Dibawah merupakan link untuk import bootstrap dan font awesome dengan menggunakan CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Dibawah merupakan html untuk menghubungkan external js script yang tersimpan dalam satu folder yang sama namun dalam file berbeda -->
+    <script src="script.js"></script>
+    <!-- Dibawah merupakan html untuk menghubungkan external css yang tersimpan dalam satu folder yang sama namun dalam file berbeda -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Dibawah merupakan html untuk menampilkan icon pada judul tab website -->
+    <link rel="icon" href="5569750.png" type="image/icon type">
+    <!-- Dibawah merupakan link untuk mengimport font dari Google Fonts, yaitu Poppins -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+<div class="formcontainer">
+    <!-- Isi dari container form dengan class formcontainer untuk stylingnya. Isi container adalah seperti judul form dan pertanyaan-pertanyaan dalam form -->
+    <h1><u>Registration Form</u></h1>
+    <form id="myForm">
+        <div class = "incontainer" >
+            <!-- Isi dari container untuk menampung full name dan date of birth. Container ini dibuat agar penempatan text field bisa lebih efisien dan tidak memakan terlalu banyak tempat saat lebar layar cukup besar, misalnya ukuran laptop. Dengan menggunakan class incontainer, display dibuat menjadi grid, sehingga dapat terbagi menjadi 2 kolom utk div full name (label dan text field) dan birth of date (label dan text field), jika lebar layar masih cukup luas. -->
+            <div>
+                <label for="name">Full Name </label>
+                <input type="text" onkeypress="return isAlphabetKey(event)" id="fname" name="fname" placeholder="Insert Your Full Name" required>
+            </div>
+            <div>
+                <label for="dob">Date of Birth </label><br>
+                <input type="date" id="dob" name="dob" required>
+                <div id="dobError" style="color: red; font-size: 12px"></div>
+            </div>
+        </div>
+        
+        <div class = "incontainer">
+            <!-- Isi dari container untuk menampung email dan phone number. Container ini dibuat agar penempatan text field bisa lebih efisien dan tidak memakan terlalu banyak tempat saat lebar layar cukup besar, misalnya ukuran laptop. Dengan menggunakan class incontainer, display dibuat menjadi grid, sehingga dapat terbagi menjadi 2 kolom utk email (label dan text field) dan phone number (label dan text field), jika lebar layar masih cukup luas. -->
+            <div>
+                <label for="email">Email </label>
+                <input type="email" id="email" name="email" placeholder="eg. test@gmail.com" required>
+                <div id="emailError" style="color: red; font-size: 12px"></div>
+            </div>
+            <div>
+                <label for="phone">Phone Number </label>
+                <input type="text" onkeypress="return isNumberKey(event)" id="phone" name = "phone" pattern="[0-9- ]{12,}" placeholder="eg. 0123-1456-7890" required>
+                <div id="phoneError" style="color: red; font-size: 12px"></div>
+            </div>
+        </div>
+        
+        <div class = "incontainer">
+            <!-- Isi dari container untuk menampung gender dan program of interest. Container ini dibuat agar penempatan radio button dan combo box bisa lebih efisien dan tidak memakan terlalu banyak tempat saat lebar layar cukup besar, misalnya ukuran laptop. Dengan menggunakan class incontainer, display dibuat menjadi grid, sehingga dapat terbagi menjadi 2 kolom utk gender (label dan pilihan radio) dan program of interest (label dan combo box field), jika lebar layar masih cukup luas. -->
+            <div class = "custom-radio">
+                <label for="gender">Gender </label><br>
+                <!-- Di bawah ini merupakan html untuk menampilkan radio dalam bentuk button menggunakan bootstrap agar lebih menarik dan responsive -->
+                <input type="radio" class="btn-check" name="gender" id="female" value = "Female" autocomplete="off" checked>
+                <label class="btn" for="female" style="margin-top: 5px;">Female <i class="fas fa-venus"></i></label>
+
+                <input type="radio" class="btn-check" name="gender" id="male" value = "Male" autocomplete="off">
+                <label class="btn" for="male" style="margin-top: 5px;">Male <i class="fas fa-mars"></i></label>
+
+                <input type="radio" class="btn-check" name="gender" id="other" value = "Other" autocomplete="off">
+                <label class="btn" for="other" style="margin-top: 5px;">Other <i class="fas fa-genderless"></i></label>
+            </div>
+            <div>
+                <label for="program">Program of Interest </label>
+                <!-- Di bawah ini merupakan combo box untuk menampilkan pilihan program dan spesialisasi dalam bentuk dropdown list untuk menghindari perbedaan inputan dan memastikan user tidak menginput program yang tidak tersedia -->
+                <select id="program" name = "program" required>
+                    <option value="">--Select Your Program--</option>
+                    <option value="Informatics - Artificial Intelligence">Informatics - Artificial Intelligence</option>
+                    <option value="Informatics - Full Stack Developer">Informatics - Full Stack Developer</option>
+                    <option value="Visual Communication Design - Graphic Design">Visual Communication Design - Graphic Design</option>
+                    <option value="Visual Communication Design - Digital Illustration">Visual Communication Design - Graphic Design</option>
+                    <option value="Visual Communication Design - Digital Media Design">Visual Communication Design - Digital Media Design</option>
+                    <option value="Management - International Business Management">Management - International Business Management</option>
+                    <option value="Management - Digital Business Management">Management - Digital Business Management</option>
+                    <option value="Management - Communication Business Management">Management - Communication Business Management</option>
+                    <option value="Management - Culinary Business Management">Management - Culinary Business Management</option>
+                </select>
+            </div>
+        </div>
+        
+        <label for="address">Address </label><br>
+        <textarea id="address" name = "address" placeholder="Insert Your Address" rows="4" required></textarea>
+        
+        <div class = "incontainer">
+            <!-- Isi dari container untuk menampung full name dan date of birth. Container ini dibuat agar penempatan text field bisa lebih efisien dan tidak memakan terlalu banyak tempat saat lebar layar cukup besar, misalnya ukuran laptop. Dengan menggunakan class incontainer, display dibuat menjadi grid, sehingga dapat terbagi menjadi 2 kolom utk div nama ibu (label dan text field) dan nama ayah (label dan text field), jika lebar layar masih cukup luas. -->
+            <div>
+                <!-- Berisi label mother's name dan text field untuk mengisi nama ibu, dan ditambahkan event listener saat key dipencet, maka akan dijalankan fungsi isAlphabetKey -->
+                <label for="motherName">Mother's Name </label>
+                <input type="text" onkeypress="return isAlphabetKey(event)" id="motherName" placeholder="Insert Your Mother's Name" name = "mothername" required>
+            </div>
+            <div>
+                <!-- Berisi label mother's name dan text field untuk mengisi nama ibu, dan ditambahkan event listener saat key dipencet, maka akan dijalankan fungsi isAlphabetKey -->
+                <label for="fatherName">Father's Name </label>
+                <input type="text" onkeypress="return isAlphabetKey(event)" id="fatherName" placeholder="Insert Your Father's Name" name = "fathername" required>
+            </div>
+        </div>
+        
+        <label for="photo">Photo </label>
+        <div class="input-group mb-3">
+            <input type="file" class="form-control" id="photo" name = "photo" accept="image/*" required>
+        </div>
+        
+        <br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <div id="output"></div>
+</div>
+<div class="newcontainer" id = "newContainer">
+    <h3 style = "margin-bottom: auto;">Your Inputted Data will goes here!</h3>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
