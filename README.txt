@@ -1,3 +1,5 @@
+##Cara menggunakan Formulir Registrasi
+
 Formulir Registrasi ini dapat merecord nama Panjang, tanggal lahir, email, nomor telepon, gender, program of interest, alamat, nama ibu, dan nama ayah, dan foto.
 
 Beberapa aturan pengisian formnya adalah:
